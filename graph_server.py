@@ -36,7 +36,7 @@ def upload_graph():
     body = request.get_json()
     return jsonify(body)
 
-@server.route('/degrees-of-separation/<origin>/<destination>', methods=['GET'])
+@server.route('/degrees-of-separation/<origin>/<destination>', methods=['PUT'])
 def find_path(origin, destination, graph='', path=[]):
         
     graph = request.get_json()
